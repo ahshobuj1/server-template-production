@@ -6,7 +6,7 @@ import { TChangePassword, TLogin, TResetPassword } from './auth.interface';
 import { AppError } from '../../errors/AppError';
 import { sendEmail } from '../../utils/sendEmail';
 import prisma from '../../utils/prisma';
-import { User, UserRole, UserStatus } from '@prisma/client';
+import { User, UserRole, UserStatus } from '../../../../prisma/generated/client/client';
 
 const register = async (payload: User) => {
   const isUserExist = await prisma.user.findUnique({
