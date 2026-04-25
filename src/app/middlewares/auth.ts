@@ -6,7 +6,7 @@ import catchAsync from '../utils/catchAsync';
 import { AppError } from '../errors/AppError';
 import config from '../config';
 import prisma from '../utils/prisma';
-import { UserStatus } from '@prisma/client';
+import { UserStatus } from '../../../prisma/generated/client/client';
 
 // higher-order middleware func
 const auth = (...requiredRoles: TUserRole[]) => {

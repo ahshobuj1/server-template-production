@@ -1,9 +1,10 @@
 {
   "name": "create-first-project",
   "version": "1.0.0",
-  "main": "./dist/server.js",
+  "main": "./dist/src/server.js",
   "scripts": {
-    "start:prod": "node ./dist/server.js",
+    "build": "tsc",
+    "start:prod": "node ./dist/src/server.js",
     "dev": "ts-node-dev --respawn --transpile-only src/server.ts",
     "lint": "eslint .",
     "lint:fix": "eslint . --fix",
